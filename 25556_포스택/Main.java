@@ -13,18 +13,18 @@ public class Main {
         Stack<Integer> stack3 = new Stack<>();
         Stack<Integer> stack4 = new Stack<>();
 
-        // put N
+        // N값 입력 받기
         int N = scanner.nextInt();
         int[] array = new int[N];
 
-        // put value in array A(range is N)
+        // 값을 배열 A에 넣기
         for(int i=0;i<N;i++){
             array[i] = scanner.nextInt();
         }
 
         scanner.close();
 
-        // put value in array A to 4 of Stack
+        // 배열 A에 있는 값을 스택에 넣기
         for(int i=0;i<N;i++){
             if(stack1.empty() || stack1.peek() < array[i]){
                 stack1.push(array[i]);
@@ -41,6 +41,4 @@ public class Main {
         }
         System.out.println("YES");
     }
-
-
 }
